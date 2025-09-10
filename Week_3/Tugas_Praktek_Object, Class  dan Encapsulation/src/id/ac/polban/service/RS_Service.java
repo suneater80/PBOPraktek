@@ -35,4 +35,36 @@ public class RS_Service{
         System.out.println("---------------------------------");
     }
 
+    public String getNamaRS() {
+        return this.namaRS;
+    }
+
+    public int getJumlahDokter() {
+        return this.daftarDokter.size();
+    }
+
+    public int getJumlahPasien() {
+        return this.daftarAntrianPasien.size();
+    }
+
+    public void tampilkanDaftarDokter() {
+        for (int i = 0; i < daftarDokter.size(); i++) {
+            System.out.println((i + 1) + ". " + daftarDokter.get(i).getNama() + " (" + daftarDokter.get(i).getSpesialis() + ")");
+        }
+    }
+
+    public void tampilkanDaftarPasien() {
+        for (int i = 0; i < daftarAntrianPasien.size(); i++) {
+            System.out.println((i + 1) + ". " + daftarAntrianPasien.get(i).getNama() + " (" + daftarAntrianPasien.get(i).getPenyakit() + ")");
+        }
+    }
+
+    public Dokter getDokter(int index) {
+        return this.daftarDokter.get(index);
+    }
+
+    public Pasien getPasien(int index) {
+        return this.daftarAntrianPasien.get(index);
+    }
+
 }
